@@ -34,12 +34,11 @@ Start the development server:
     Open your web browser and visit http://localhost:8080 to view the website.
 
 Usage
-
-    Create new invoices, view existing ones, edit or delete invoices as needed.
-    Track your financial transactions with ease.
+ - Create new invoices, view existing ones, edit or delete invoices as needed.
+ - Track your financial transactions with ease.
 
 Acknowledgements
 
-    Vue.js: https://v3.vuejs.org/
-    Vuex: https://vuex.vuejs.org/
-    Firebase: https://firebase.google.com/
+ - Vue.js: https://v3.vuejs.org/
+ - Vuex: https://vuex.vuejs.org/
+ - Firebase: https://firebase.google.com/
