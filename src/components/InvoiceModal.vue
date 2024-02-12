@@ -147,9 +147,12 @@ export default {
             invoiceTotal: 0,
         };
     }, 
+    // methods that can be called in this vue componenet
+    // we use mapMutations and put in toggle invoice into the array
+    // create a method of close invoice to close it with the button
     methods: {
         ...mapMutations(['TOGGLE_INVOICE']),
-        
+
         closeInvoice() {
             this.TOGGLE_INVOICE();
         },

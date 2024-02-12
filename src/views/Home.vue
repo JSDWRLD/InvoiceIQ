@@ -40,6 +40,7 @@ export default {
     components: {},
     methods: {
         ...mapMutations(['TOGGLE_INVOICE']),
+        // this time we open and create a invoice, it simply does the opposite
         newInvoice() {
             this.TOGGLE_INVOICE();
         },
