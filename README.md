@@ -15,7 +15,7 @@ This project is an invoice tracker built using Vue 3, Vuex for state management,
 To run this project locally, follow these steps:
 
     Clone this repository to your local machine:
-    git clone https://github.com/your-username/vue-invoice-tracker.git
+    git clone https://github.com/JSDWRLD/InvoiceIQ.git
 
 Install dependencies using npm:
 
