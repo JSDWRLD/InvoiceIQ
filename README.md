@@ -1,4 +1,4 @@
-# InvoiceIq
+# InvoiceIq (WIP)
 
 This project is an invoice tracker built using Vue 3, Vuex for state management, and Firebase for the backend. It allows users to manage their invoices efficiently and securely.
 
