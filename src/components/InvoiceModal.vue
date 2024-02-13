@@ -125,6 +125,7 @@ export default {
     name: "invoiceModal",
     data() {
         return {
+            dateOptions: { year: "numeric" , month: "short", day: "numeric"}, 
             billerStreetAddress: null,
             billerCity: null,
             billerZipCode: null,
@@ -147,6 +148,12 @@ export default {
             invoiceTotal: 0,
         };
     }, 
+    created() {
+
+        // getting current date
+        this.invoiceDateUnix = Date.now();
+        this.invoiceDate = new Date(this.invoiceDateUnix).toLocaleDateString('en-us', this.dateOptions);
+    },
     // methods that can be called in this vue componenet
     // we use mapMutations and put in toggle invoice into the array
     // create a method of close invoice to close it with the button
@@ -157,7 +164,15 @@ export default {
             this.TOGGLE_INVOICE();
         },
     },
-}
+    watch: {
+        paymentTerms() {
+            const futureDate = new Date();
+            this.paymentDueDateUnix = futureDate.setDate(futureDate.getDate() + parseInt(this.paymentTerms));
+            this.paymentDueDate = new Date(this.paymentDueDateUnix).toLocaleDateString('en-us', this.dateOptions);
+        }
+    },
+};
+
 </script>
 
 <style scoped>
@@ -169,6 +184,11 @@ export default {
     width: 100%;
     height: 100vh;
     overflow: scroll;
+    scrollbar-width: none; 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     @media(min-width: 900px) {
         left: 90px;
     }
