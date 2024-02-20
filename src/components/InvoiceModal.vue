@@ -174,6 +174,10 @@ export default {
                 total: 0,
             })
         },
+
+        deleteInvoiceItems(id) {
+            this.invoiceItemList = this.invoiceItemList.filter(item => item.id !== id);
+        }
     },
     watch: {
         paymentTerms() {
