@@ -1,6 +1,7 @@
 <template>
     <div @click="checkClick" ref="invoiceWrap" class="invoice-wrap flex flex-column">
         <form @submit.prevent="submitForm" class="invoice-content">
+            <loadingAnim v-show="loading" />
             <h1>New Invoice</h1>
 
             <!-- Bill From -->
@@ -108,11 +109,11 @@
             <!-- Save/Exit -->
             <div class="save flex">
                 <div class="left">
-                    <button @click="closeInvoice" class="red">Cancel</button>
+                    <button type="button" @click="closeInvoice" class="red">Cancel</button>
                 </div>
                 <div class="right flex">
-                    <button @click="saveDraft" class="dark-purple">Save Draft</button>
-                    <button @click="publishInvoice" class="purple">Create Invoice</button>
+                    <button type="submit" @click="saveDraft" class="dark-purple">Save Draft</button>
+                    <button type="submit" @click="publishInvoice" class="purple">Create Invoice</button>
                 </div>
             </div>
         </form>
@@ -122,6 +123,7 @@
 <script>
 import db from "../firebase/firebaseinit";
 import { collection, addDoc } from 'firebase/firestore';
+import loadingAnim from "../components/Loading.vue";
 import { mapMutations } from 'vuex';
 import { uid } from 'uid';
 export default {
@@ -129,6 +131,7 @@ export default {
     data() {
         return {
             dateOptions: { year: "numeric" , month: "short", day: "numeric"}, 
+            loading: null,
             billerStreetAddress: null,
             billerCity: null,
             billerZipCode: null,
@@ -151,6 +154,9 @@ export default {
             invoiceTotal: 0,
         };
     }, 
+    components: {
+        loadingAnim,
+    },
     created() {
 
         // getting current date
@@ -161,7 +167,13 @@ export default {
     // we use mapMutations and put in toggle invoice into the array
     // create a method of close invoice to close it with the button
     methods: {
-        ...mapMutations(['TOGGLE_INVOICE']),
+        ...mapMutations(['TOGGLE_INVOICE', 'TOGGLE_MODAL']),
+
+        checkClick(e) {
+            if (e.target === this.$refs.invoiceWrap) {
+                this.TOGGLE_MODAL();
+            }
+        },
 
         closeInvoice() {
             this.TOGGLE_INVOICE();
@@ -202,6 +214,8 @@ export default {
                 return;
             }
 
+            this.loading = true;
+            
             this.calInvoiceTotal();
             
             const dataBase = collection(db,'invoices');
@@ -230,6 +244,8 @@ export default {
                 invoiceDraft: this.invoiceDraft,
                 invoicePaid: null,
             });
+
+            this.loading = false;
 
             this.TOGGLE_INVOICE();
         },

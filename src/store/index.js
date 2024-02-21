@@ -4,6 +4,7 @@ export default createStore({
   state: {
     // default state to null to keep invoices closed
     invoiceModal: null,
+    modalActive: null,
   },
   mutations: {
     // This is used by Home and invoicemodal to allow for the mutation of the buttons
@@ -11,6 +12,9 @@ export default createStore({
     // state is the parameter and will turn to the opposite true or false
     TOGGLE_INVOICE(state) {
       state.invoiceModal = !state.invoiceModal;
+    },
+    TOGGLE_MODAL(state){
+      state.modalActive = !state.modalActive;
     },
   },
   actions: {
