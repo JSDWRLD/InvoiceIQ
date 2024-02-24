@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
-import db from '../firebase/firebaseinit';
+import db from "../firebase/firebaseinit";
+import { collection, getDocs } from 'firebase/firestore';
+
 
 export default createStore({
   state: {
@@ -21,6 +23,7 @@ export default createStore({
     },
     SET_INVOICE_DATA(state, payload) {
       state.invoiceData.push(payload);
+      console.log(state.invoiceData);
     },
     INVOICES_LOADED(state){
       state.invoicesLoaded = true;
@@ -28,8 +31,9 @@ export default createStore({
   },
   actions: {
     async GET_INVOICES({commit, state}){
-      const getData = db.collection('invoices');
-      const results = await getData.get();
+      const getData = collection(db, 'invoices');
+
+      const results = await getDocs(getData);
       results.forEach(doc => {
         if(!state.invoiceData.some(invoice => invoice.docId === doc.id)){
           const data = {
