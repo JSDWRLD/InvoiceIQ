@@ -23,7 +23,6 @@ export default createStore({
     },
     SET_INVOICE_DATA(state, payload) {
       state.invoiceData.push(payload);
-      console.log(state.invoiceData);
     },
     INVOICES_LOADED(state){
       state.invoicesLoaded = true;
