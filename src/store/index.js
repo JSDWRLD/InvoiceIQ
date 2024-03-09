@@ -10,6 +10,7 @@ export default createStore({
     invoiceModal: null,
     modalActive: null,
     invoicesLoaded: null,
+    currentInvoiceArray: null,
   },
   mutations: {
     // This is used by Home and invoicemodal to allow for the mutation of the buttons
@@ -26,6 +27,11 @@ export default createStore({
     },
     INVOICES_LOADED(state){
       state.invoicesLoaded = true;
+    },
+    SET_CURRENT_INVOICE(state, payload) {
+      state.currentInvoiceArray = state.invoiceData.filter(invoice => {
+        return invoice.invoiceId == payload;
+      });
     },
   },
   actions: {
