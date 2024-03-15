@@ -109,8 +109,18 @@ export default {
         },
     },
     computed: {
-        ...mapState(["currentInvoiceArray"]),
-    }
+        ...mapState(["currentInvoiceArray", "editInvoice"]),
+    },
+    watch: {
+        // Watch for changes to the 'editInvoice' flag
+        editInvoice(newVal, oldVal) {
+            if (!newVal && oldVal) { 
+                // Invoice edit is complete, refresh invoice data
+                this.getCurrentInvoice();
+            }
+        }
+    },
+    
 }
 </script>
 <style lang="scss" scoped>
