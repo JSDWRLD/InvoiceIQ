@@ -93,7 +93,6 @@
     }
   }
   
-  // animated invoice
   
   .invoice-enter-active,
   .invoice-leave-active {
@@ -136,7 +135,6 @@
     background-color: #ff8f00;
   }
   
-  // utility classes
   
   .flex {
     display: flex;
@@ -162,7 +160,6 @@
     color: initial;
   }
   
-  // Status Button Styling
   
   .status-button {
     &::before {
