@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import db from "../firebase/firebaseinit";
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 
 
 export default createStore({
@@ -84,6 +84,12 @@ export default createStore({
       commit('TOGGLE_INVOICE');
       commit('TOGGLE_EDIT_INVOICE');
       commit('SET_CURRENT_INVOICE', routeId);
+    },
+    async DELETE_INVOICE({commit}, docId){
+      // grabs current invoice
+      const invoiceRef = doc(db, 'invoices', docId);
+      await deleteDoc(invoiceRef);  
+      commit('DELETE_INVOICE', docId);
     },
   },
   modules: {
