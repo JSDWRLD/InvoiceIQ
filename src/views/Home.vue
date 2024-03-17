@@ -133,7 +133,7 @@ export default {
                     position: absolute;
                     top: 25px;
                     list-style: none;
-                    background-color: #1e2139;
+                    background-color: #003515;
                     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
                     li {
@@ -142,7 +142,7 @@ export default {
                         padding: 10px 20px;
 
                         &:hover {
-                            color: #1e2139;
+                            color: #003515;
                             background-color: #fff;
                         }
                     }
@@ -151,7 +151,7 @@ export default {
 
             .button {
                 padding: 8px 10px;
-                background-color: #7c5dfa;
+                background-color: #38A664;
                 border-radius: 40px;
 
                 .inner-button {

@@ -14,7 +14,7 @@ export default {
 <style scoped>
     header {
         z-index: 99;
-        background-color: #1e2139;
+        background-color: #003515;
         @media only screen and (min-width: 900px) {
             min-height: 100%;
             min-width: 90px;
@@ -24,7 +24,7 @@ export default {
 
         .branding {
             border-radius: 0 20px 20px 0;
-            background-color: #7c5dfa;
+            background-color: #38A664;
             justify-content: center;
             padding: 24px;
             flex-direction: column;

@@ -67,7 +67,7 @@
   }
   
   .app {
-    background-color: #141625;
+    background-color: #001609;
     min-height: 100vh;
     @media (min-width: 900px) {
       flex-direction: row !important;
@@ -85,7 +85,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #141625;
+    background-color: #001609;
     color: #fff;
   
     p {
@@ -116,15 +116,15 @@
   }
   
   .dark-purple {
-    background-color: #252945;
+    background-color: #17753D;
   }
   
   .red {
-    background-color: #ec5757;
+    background-color: #FF6E40;
   }
   
   .purple {
-    background-color: #7c5dfa;
+    background-color: #38A664;
   }
   
   .green {
@@ -132,7 +132,7 @@
   }
   
   .orange {
-    background-color: #ff8f00;
+    background-color: #DB820B;
   }
   
   
@@ -186,9 +186,9 @@
   
   .pending {
     &::before {
-      background-color: #ff8f00;
+      background-color: #DB820B;
     }
-    color: #ff8f00;
+    color: #DB820B;
     background-color: rgba(255, 145, 0, 0.1);
   }
   

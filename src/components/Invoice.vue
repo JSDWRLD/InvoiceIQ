@@ -37,7 +37,7 @@ export default {
         color: #fff;
         border-radius: 20px;
         padding: 28px 32px;
-        background-color: #1e2139;
+        background-color: #003515;
         align-items: center;
 
         span {
@@ -67,6 +67,13 @@ export default {
                 flex: 1;
                 font-size: 16px;
                 font-weight: 600px;
+            }
+        }
+
+        .icon {
+                img {
+                width: 12px;
+                height: 10px;
             }
         }
     }

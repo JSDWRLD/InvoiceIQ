@@ -155,7 +155,7 @@ export default {
 
         .header,
         .invoice-details {
-            background-color: #1e2139;
+            background-color: #003515;
             border-radius: 20px;
         }
 
@@ -271,7 +271,7 @@ export default {
                 .billing-items {
                     padding: 32px;
                     border-radius: 20px 20px 0 0 ;
-                    background-color: #252945;
+                    background-color: #17753D;
 
                     .heading {
                         color: #dfe3fa;
