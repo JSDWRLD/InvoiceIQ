@@ -8,7 +8,6 @@ This project is an invoice tracker built using Vue 3, Vuex for state management,
 * **Vuex:** Implements Vuex for state management, ensuring a centralized and predictable state for the application.
 * **Firebase Backend:** Utilizes Firebase for authentication, database, and hosting, providing a scalable and reliable backend solution.
 * **Invoice Tracking:** Allows users to create, view, edit, and delete invoices, keeping track of their financial transactions.
-* **Responsive Design:** Although not currently supporting mobile devices, the website is designed to be responsive and may support mobile devices in future updates.
 
 ### Photo Demo
 **This is a view of the homescreen.**
