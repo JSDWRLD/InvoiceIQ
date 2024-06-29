@@ -9,7 +9,7 @@ This project is an invoice tracker built using Vue 3, Vuex for state management,
 * **Firebase Backend:** Utilizes Firebase for authentication, database, and hosting, providing a scalable and reliable backend solution.
 * **Invoice Tracking:** Allows users to create, view, edit, and delete invoices, keeping track of their financial transactions.
 
-### Photo Demo
+### Photo of Live Application
 **This is a view of the homescreen.**
 ![Homescreen](https://github.com/JSDWRLD/InvoiceIQ/assets/123333887/57d4f232-d533-432d-bba0-dd4a6c465393)
 
