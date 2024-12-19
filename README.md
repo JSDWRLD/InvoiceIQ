@@ -22,32 +22,6 @@ This project is an invoice tracker built using Vue 3, Vuex for state management,
 **Inside of the new invoice menu there is a item list that you can keep adding to.**
 ![ItemList](https://github.com/JSDWRLD/InvoiceIQ/assets/123333887/55c949aa-6131-4732-8112-d96c92945663)
 
-
-
-
-### Installation
-
-To run this project locally, follow these steps:
-
-    Clone this repository to your local machine:
-    git clone https://github.com/JSDWRLD/InvoiceIQ.git
-
-Install dependencies using npm:
-
-    npm install
-
-Set up Firebase:
-
-    Create a Firebase project and set up Firebase Authentication and Firestore.
-    Obtain your Firebase configuration (apiKey, authDomain, projectId, etc.).
-    Replace the Firebase configuration in the src/firebase.js file with your own.
-
-Start the development server:
-
-    npm run serve
-
-    Open your web browser and visit http://localhost:8080 to view the website.
-
 ### Usage
  - Create new invoices, view existing ones, edit or delete invoices as needed.
  - Track your financial transactions with ease.
