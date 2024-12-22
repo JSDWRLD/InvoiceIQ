@@ -1,6 +1,6 @@
-# InvoiceIq (Production Ver)
+# InvoiceIQ
 
-This project is an invoice tracker built using Vue 3, Vuex for state management, and Firebase for the backend. It allows users to manage their invoices efficiently. 
+This project is an invoice tracker built using Vue 3, Vuex for state management, and Firebase for the backend. It allows users to manage their invoices efficiently. Originally developed as a commission for a general contracting company.
 
 ### Features
 
